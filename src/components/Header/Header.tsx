@@ -3,7 +3,7 @@ import { AiOutlineMail } from "react-icons/ai";
 
 export const Header = () => {
     return (
-        <header className="flex flex-row w-100 h-[10vh] py-4 align-middle">
+        <header className="flex flex-row w-100 h-[10vh] py-8 align-middle">
             <div className="flex flex-row justify-between flex-1">
                 <HeaderLink title="About"/>
                 <HeaderLink title="Contact"/>

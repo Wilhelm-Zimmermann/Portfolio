@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useRef, useState } from "react";
 import { TechCard } from "./TechCard";
 import { BiLogoReact } from "react-icons/bi";
 import { BiLogoNodejs } from "react-icons/bi";
@@ -10,10 +12,40 @@ import { DiMysql } from "react-icons/di";
 import { TbBrandCSharp } from "react-icons/tb";
 
 export const TechStack = () => {
+    const techStackRef = useRef<HTMLDivElement | null>(null);
+    const [isVisible, setIsVisible] = useState<boolean>(false);
+
+    useEffect(() => {
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            });
+        }, options);
+
+        if(techStackRef.current) {
+            observer.observe(techStackRef.current);
+        }
+
+        return () => {
+            if(techStackRef.current) {
+                observer.unobserve(techStackRef.current);
+            }
+        }
+    }, [])
+    
+
     return (
-        <section className="flex flex-col gap-2">
+        <section ref={techStackRef} className={`flex flex-col gap-2 transition-opacity duration-[2s] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <h1 className="text-xl font-bold">Tecnologias que tenho experiência</h1>
-            <div className="flex flex-row flex-wrap gap-3 pb-4">
+            <div className="flex flex-col flex-wrap gap-3 pb-4 sm:flex-row">
                 <TechCard description="" title="React" icon={<BiLogoReact color="#328fa8" size={40}/>}/>
                 <TechCard description="descricao" title="Node JS" icon={<BiLogoNodejs color="#32a83a" size={40}/>}/>
                 <TechCard description="descricao" title="CSharp" icon={<TbBrandCSharp color="#7532a8" size={40}/>}/>

@@ -1,5 +1,3 @@
-import { FaReact } from "react-icons/fa";
-
 interface TechCardProps {
     title: string;
     description: string;
@@ -8,7 +6,7 @@ interface TechCardProps {
 
 export const TechCard = ({ title, description, icon }: TechCardProps) => {
     return (
-        <div className="w-[32%] h-44 bg-gray-300 rounded-sm shadow-lg flex flex-col p-4 justify-around">
+        <div className="w-[100%] h-44 sm:w-[48%] lg:w-[32%] bg-gray-300 rounded-sm shadow-lg flex flex-col p-4 justify-around">
             <div className="flex flex-row gap-2 content-center border-s-orange-100">
                 <div className="place-self-end">
                     {icon}

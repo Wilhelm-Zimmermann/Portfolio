@@ -4,7 +4,7 @@ import { TechStack } from '@/components/TechStack'
 
 export default function Home() {
   return (
-    <div className='flex flex-col px-20'>
+    <div className='flex flex-col px-10'>
       <Header />
       <About />
       <TechStack />
