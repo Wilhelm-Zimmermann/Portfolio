@@ -43,8 +43,11 @@ export const TechStack = () => {
     
 
     return (
-        <section ref={techStackRef} className={`flex flex-col gap-2 transition-opacity duration-[2s] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <h1 className="text-xl font-bold">Tecnologias que tenho experiência</h1>
+        <section ref={techStackRef} className={`px-10 flex flex-col gap-2 transition-opacity duration-[2s] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <div className="flex flex-col">
+                <h1 className="text-xl font-bold text-comp1">Tecnologias que tenho experiência</h1>
+                <div className="w-56 h-1 bg-secondary"></div>
+            </div>
             <div className="flex flex-col flex-wrap gap-3 pb-4 sm:flex-row">
                 <TechCard description="" title="React" icon={<BiLogoReact color="#328fa8" size={40}/>}/>
                 <TechCard description="descricao" title="Node JS" icon={<BiLogoNodejs color="#32a83a" size={40}/>}/>
