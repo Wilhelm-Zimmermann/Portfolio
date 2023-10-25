@@ -9,18 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       // colors: {
-      //   primary: "#e0fbfc",
-      //   secondary: "#EE6C4D",
-      //   terciary: "#293241",
-      //   comp1 : "#C2DFE3",
-      //   comp2 : "#98C1D9"
+      //   background: "#062336",
+      //   primary: "#181a29",
+      //   secondary: "#0a002b",
+      //   terciary : "#232736",
+      //   comp1 : "#13334b"
       // },
       colors: {
-        primary: "#2d283e",
-        secondary: "#4c495d",
-        terciary: "#564f6f",
-        comp1 : "#802bb1",
-        comp2 : "#d1d7e0"
+        background: "#2D2933",
+        primary: "#372B47",
+        secondary: "#51317A",
+        terciary : "#6000E1",
+        comp1 : "#5F23AD",
+        comp2: "#4fff61"
       },
     },
   },
