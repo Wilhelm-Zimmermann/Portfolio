@@ -5,8 +5,7 @@ import { TechStack } from '@/components/TechStack'
 
 export default function Home() {
   return (
-    // <div className='flex flex-col bg-gradient-to-b from-primary via-comp1 to-comp2'>
-    <div className='flex flex-col bg-primary'>
+    <div className='flex flex-col bg-background'>
       <Header />
       <About />
       <TechStack />
