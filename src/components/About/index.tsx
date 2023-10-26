@@ -24,7 +24,7 @@ export const About = () => {
     },[])
 
     return (
-        <main className={`w-full h-[100vh] px-10 flex flex-row gap-x-7 transition-opacity duration-[2s] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <main className={`w-full h-[100vh] px-10 flex flex-row gap-x-7 transition-opacity duration-[1s] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <section className={`flex flex-col justify-center w-[613px] flex-1`}>
                 <h1 className="font-bold text-3xl w-fit text-gray-200">Hello I am Wilhelm Henrique Zimmermann</h1> 
                 <h3 className="mt-2 text-gray-300">

@@ -1,6 +1,5 @@
 "use client";
 import Overlay from "@/components/Overlay";
-import { useEffect } from "react";
 
 interface TechStackDetailsProps {
     show: boolean;
@@ -9,20 +8,15 @@ interface TechStackDetailsProps {
 
 export default function TechStackDetails({ show, onHide }: TechStackDetailsProps) {
 
-    useEffect(() => {
-        console.log(show);
-        
-    }, [show])
-
     return (
         <>
             {/* {show &&  */}
-                <div className={`fixed top-0 left-0 z-10 w-full h-full transition-opacity ease-in-out duration-300 ${show ? "block opacity-100" : "hidden opacity-0"}`}>
+                <div className={`fixed top-0 left-0 z-10 w-full h-full ${show ? "block" : "hidden"}`}>
                     <div
                     className={`
                             absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                            w-[800px] h-[500px] bg-primary border-2 border-comp1 hover:border-terciary 
-                            rounded-sm shadow-md transition-opacity duration-[1s]
+                            w-[800px] h-[500px] bg-primary border-[1px] border-comp1 hover:border-terciary 
+                            rounded-sm shadow-sm shadow-terciary transition-opacity duration-[1s]
                             p-4 flex flex-col ${show ? "opacity-100" : "opacity-0"}
                         `}
                     >
