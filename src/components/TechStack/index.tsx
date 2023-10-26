@@ -43,7 +43,7 @@ export const TechStack = () => {
     
 
     return (
-        <section ref={techStackRef} className={`px-10 flex flex-col gap-2 transition-opacity duration-[1s] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <section ref={techStackRef} className={`px-10 py-10 bg-primary flex flex-col border-t-2 border-secondary gap-2 transition-opacity duration-[1s] shadow-inner shadow-terciary ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <div className="flex flex-col gap-y-1 mb-2">
                 <h1 className="text-xl font-bold text-gray-200">Tecnologias que tenho experiência</h1>
                 <div className="w-56 h-1 bg-secondary"></div>
