@@ -7,7 +7,7 @@ import RootLayout from './layout'
 export default function Home() {
   return (
     <RootLayout>
-      <div className='flex flex-col bg-background'>
+      <div className='flex flex-col'>
         <Header />
         <About />
         <TechStack />
