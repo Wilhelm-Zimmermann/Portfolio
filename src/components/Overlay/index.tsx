@@ -17,6 +17,6 @@ export default function Overlay({ func }: OverlayProps) {
     }, [])
 
     return (
-        <div onClick={func} className={`absolute top-0 left-0 w-full h-full cursor-pointer bg-black transition-opacity duration-[1s] ${isVisible ? "opacity-50" : "opacity-0"}`}></div>
+        <div onClick={func} className={`absolute top-0 left-0 w-full h-screen cursor-pointer z-10 bg-black transition-opacity duration-[1s] ${isVisible ? "opacity-50" : "opacity-0"}`}></div>
     )
 }

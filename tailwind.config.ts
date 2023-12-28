@@ -8,13 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // colors: {
-      //   background: "#060917",
-      //   primary: "#160c33",
-      //   secondary: "#1d0f45",
-      //   terciary : "#6f21ff",
-      //   comp1 : "#6919ff"
-      // },
+      scrollbar: ['rounded'],
       colors: {
         background: "#2D2933",
         primary: "#372B47",
@@ -25,6 +19,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')],
 }
 export default config

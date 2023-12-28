@@ -11,8 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <body className='bg-gradient-to-br from-background via-primary to-secondary'> */}
-      <body className='bg-background'>
-      <Header />
+      <body className='bg-gray-900'>
         {children}
       </body>
     </html>
