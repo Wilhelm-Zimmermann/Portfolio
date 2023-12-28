@@ -2,15 +2,15 @@ import StackPercent from "./StackPercent";
 
 export default function Resumo() {
     return (
-        <div id="resumo" className="w-full py-10 px-10 flex flex-col bg-gray-900">
-            <div className="flex flex-col mt-10 gap-1">
+        <section id="resumo" className="w-full py-10 xl:px-10 px-5 flex flex-col bg-gray-900">
+            <div className="flex flex-col xl:mt-10 gap-1">
                 <h1 className="text-white text-3xl">Resumo</h1>
                 <div className="w-[90px] h-[3px] bg-terciary"></div>
             </div>
 
-            <div className="flex flex-row-reverse mt-10 gap-x-2">
+            <div className="flex flex-col xl:flex-row-reverse mt-10 gap-x-2">
                 {/* Educação */}
-                <div className="flex flex-col w-[50%]">
+                <div className="flex flex-col w-full mt-4 xl:mt-0 xl:w-[50%]">
                     <h2 className="text-white font-semibold text-2xl">Educação</h2>
 
                     <div className="flex flex-col bg-gray-950 w-full min-h-[200px] justify-center gap-2 mt-6 rounded-md text-white p-6">
@@ -22,7 +22,7 @@ export default function Resumo() {
                 {/* Fim educação */}
 
                 {/* Experiências */}
-                <div className="flex flex-col w-[50%]">
+                <div className="flex flex-col w-full mt-4 xl:mt-0 xl:w-[50%]">
                     <h2 className="text-white font-semibold text-2xl">Experiências</h2>
                     
                     <div className="flex flex-col bg-gray-950 w-full min-h-[200px] justify-center gap-2 mt-6 rounded-md text-white p-6">
@@ -60,6 +60,6 @@ export default function Resumo() {
                     <StackPercent title="ReactJS" percent="82"/>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

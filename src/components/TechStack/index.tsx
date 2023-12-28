@@ -44,21 +44,16 @@ export const TechStack = () => {
     
 
     return (
-        <section id="todo" ref={techStackRef} className={`w-full h-screen px-10 bg-gray-800 flex flex-col gap-2 transition-opacity duration-[1s] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="flex flex-col gap-y-1 mt-20">
+        <section id="todo" ref={techStackRef} className={`w-full 2xl:h-screen px-5 md:px-10 bg-gray-800 flex flex-col md:gap-2 transition-opacity duration-[1s] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <div className="flex flex-col gap-y-1 py-10 2xl:mt-20">
                 <h1 className="text-3xl font-normal text-gray-200">Oque eu Faço</h1>
                 <div className="w-[130px] h-[3px] bg-terciary"></div>
             </div>
-            <div className="w-full flex flex-wrap gap-3 sm:flex-row mt-10">
+            <div className="w-full flex flex-wrap gap-3 flex-col md:flex-row 2xl:mt-5">
                 <TechCard description="" title="React" icon={<FaDisplay color="#328fa8" size={40}/>}/>
                 <TechCard description="descricao" title="Node JS" icon={<BiLogoNodejs color="#32a83a" size={40}/>}/>
                 <TechCard description="descricao" title="CSharp" icon={<TbBrandCSharp color="#7532a8" size={40}/>}/>
                 <TechCard description="descricao" title="HTML 5" icon={<AiFillHtml5 color="#a83232" size={40}/>}/>
-                {/* <TechCard description="descricao" title="CSS 3" icon={<FaCss3 color="#1e34a6" size={40}/>}/> */}
-                {/* <TechCard description="descricao" title="TypeScript" icon={<BiLogoTypescript color="#1e34a6" size={40}/>}/> */}
-                {/* <TechCard description="descricao" title="Amazon Web Services" icon={<BiLogoAws color="#1e34a6" size={40}/>}/> */}
-                {/* <TechCard description="descricao" title="My Sql" icon={<DiMysql color="#1e34a6" size={40}/>}/> */}
-                {/* <TechCard description="descricao" title="JavaScript" icon={<BiLogoJavascript color="#fffb0d" size={40}/>}/> */}
             </div>
         </section>
     )

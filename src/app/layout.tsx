@@ -8,7 +8,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
+      <title>Portifolio</title>
       {/* <body className='bg-gradient-to-br from-background via-primary to-secondary'> */}
       <body className='bg-gray-900'>
         {children}
