@@ -27,15 +27,16 @@ export const About = () => {
     },[])
 
     return (
-        <section id="sobre" className={`w-full h-screen flex flex-col px-10 transition-opacity duration-[1s] ${isVisible ? 'opacity-100' : 'opacity-0'} bg-gray-900 justify-center gap-y-16 z-20`}>
-            <div className="w-full flex flex-col  gap-y-2">
+        <main id="sobre" className={`w-full py-10 xl:h-screen xl:py-0 flex flex-col px-5 md:px-10 transition-opacity duration-[1s] ${isVisible ? 'opacity-100' : 'opacity-0'} bg-gray-900 justify-center gap-y-8 xl:gap-y-16 z-20`}>
+            <div className="w-full flex flex-col md:gap-y-2">
                 <h1 className="font-normal text-3xl text-gray-200">Sobre Mim</h1> 
                 <div className="w-[100px] h-[2px] justify-self-center bg-terciary"></div>
             </div>
 
-            <div className="w-full flex justify-between">
-                <div className="mt-2 w-[68%]">
-                    <h2 className="text-gray-50 font-semibold text-2xl">Olá, me chamo Wilhelm, sou um <span className="text-terciary font-bold">Desenvolvedor Full Stack</span></h2>
+            <div className="w-full flex flex-col justify-between xl:flex-row">
+                {/* info */}
+                <div className="w-[100%] md:mt-2 xl:w-[68%]">
+                    <h2 className="text-gray-50 font-semibold text-2xl">Olá, me chamo Wilhelm, sou um <span className="text-transparent font-bold bg-gradient-to-r from-blue-500 to-terciary bg-clip-text">Desenvolvedor Full Stack</span></h2>
                     <h3 className="text-gray-300 text-lg mt-4">
                         I am Full Stack Developer focused on the web, I am capable to build almost everything that envolves the web Ea adipisicing tempor voluptate et cillum do sunt ut. Commodo ullamco sit deserunt adipisicing Lorem ut do ipsum mollit quis. Ex et anim voluptate ad. Irure nostrud incididunt sint anim eiusmod labore reprehenderit sint fugiat tempor enim.
                         nim ex proident in. Sunt duis quis deserunt sunt occaecat est ullamco voluptate aliqua eu culpa ut.
@@ -44,8 +45,10 @@ export const About = () => {
                     Full Stack Developer focused on the web, I am capable to build almost everything that envolves the web Ea adipisicing tempo
                     </h3>
                 </div>
+                {/* end info */}
 
-                <div className="w-[30%]">
+                {/* personel */}
+                <div className="mt-8 w-[100%] xl:w-[30%] md:mt-0">
                     <div className="w-full border-b-2 border-gray-800 py-4">
                         <h4 className="text-gray-300 font-medium">Nome: <span className="font-normal">Wilhelm Henrique Zimmermann</span></h4>
                     </div>
@@ -59,7 +62,9 @@ export const About = () => {
                         <h4 className="text-gray-300 font-medium">Endereço: <span className="font-normal">Indaial; Santa Catarina</span></h4>
                     </div>
                 </div>
+                {/* end personel */}
+
             </div>
-        </section>
+        </main>
     )
 }
