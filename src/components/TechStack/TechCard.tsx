@@ -9,35 +9,24 @@ interface TechCardProps {
 }
 
 export const TechCard = ({ title, description, icon }: TechCardProps) => {
-    const [showTechDetails, setShowTechDetails] = useState(false);
-
-    const handleOpenTechStackDetails = () => {
-        setShowTechDetails(true);
-    }
-
-    const handleCloseTechStackDetails = () => {
-        setShowTechDetails(false);
-    }
-
     return (
         <>
-            <div onClick={handleOpenTechStackDetails} className="
-                w-full h-44 sm:w-[48%] lg:w-[32%] xl:w-[24%] 
-                cursor-pointer bg-primary border-2 border-secondary hover:border-terciary hover:shadow-secondary
-                text-gray-100 rounded-sm shadow-primary shadow-lg flex flex-col p-4 justify-around transition-all duration-200">
-                <div className="flex flex-row gap-2 content-center border-s-orange-100">
-                    <div className="place-self-end">
-                        {icon}
+            <div className="
+                w-full h-44 xl:w-[49%] 
+                cursor-pointer text-gray-100 flex justify-around transition-all duration-200">
+                <div className="flex flex-row gap-x-4 w-full">
+                    <div className="w-[15%] flex items-center">
+                        <div className="w-[100%] bg-gray-900 rounded-md p-6 flex justify-center items-center">
+                            {icon}
+                        </div>
                     </div> 
-                    <span className="place-self-center">{title}</span>
+
+                    <div className="w-[84%] flex flex-col justify-center">
+                        <h1 className="self-start text-xl font-semibold">{title}</h1>
+                        <span className="mt-2 text-gray-300">Laboris velit ex consectetur et quis sunt dolor do ea irure. Consequat proident non in id ut. Quis enim in c</span>
+                    </div>
                 </div>
-                {/* <span>{description}</span> */}
-                <span>Laboris velit ex consectetur et quis sunt dolor do ea irure. Consequat proident non in id ut. Quis enim in c</span>
             </div>
-                <TechStackDetails 
-                    show={showTechDetails}
-                    onHide={handleCloseTechStackDetails}
-                />
         </>
     )
 }
