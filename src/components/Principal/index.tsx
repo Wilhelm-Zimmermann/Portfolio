@@ -1,27 +1,43 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, SetStateAction, Dispatch } from "react";
 import TextLoop from "react-text-loop";
 import Typewriter from 'typewriter-effect';
 
-export default function Principal() {
-    const [texts, setTexts] = useState(['Hello', 'Welcome', 'Hola']); // Array of texts to display
-    const [currentTextIndex, setCurrentTextIndex] = useState(0);
+interface PrincipalProps {
+    setSelected: Dispatch<SetStateAction<string>>;
+}
 
-    const [isBrowser, setIsBrowser] = useState(false);
+export default function Principal({setSelected}: PrincipalProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-          setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-        }, 2000); // Change text every 2 seconds (2000 milliseconds)
-    
-        return () => clearInterval(interval);
-    }, [texts]);
+    const principalRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         if (videoRef.current) {
           videoRef.current.load();
+        }
+        const handleScroll: IntersectionObserverCallback  = entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    setSelected("Home")
+                }
+            });
+        }
+
+        const observer = new IntersectionObserver(handleScroll, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5
+        });
+
+        if(principalRef.current) {
+            observer.observe(principalRef.current);
+        }
+
+        return () => {
+            if(principalRef.current) {
+                observer.unobserve(principalRef.current)
+            }
         }
     }, [])
 
@@ -32,7 +48,7 @@ export default function Principal() {
     };
 
     return (
-        <section id="home" className="w-full h-screen relative">
+        <section id="home" ref={principalRef} className="w-full h-screen relative">
             <video className="w-full h-screen object-cover" autoPlay muted ref={videoRef} onEnded={handleVideoEnded}>
                 <source className="w-full h-screen" src={"/video/programacao.mp4"} type="video/mp4" />
                 Your browser does not support the video tag.

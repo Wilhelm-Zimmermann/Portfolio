@@ -1,33 +1,47 @@
 "use client";
-import { Stack } from "./Stack";
-import { useEffect, useState } from "react";
-import Image from "next/image";
-import bgAbout from "../../../public/images/about-bg.avif";
-import Overlay from "../Overlay";
+import { useEffect, useState, useRef, Dispatch, SetStateAction } from "react";
 
-export const About = () => {
+interface AboutProps {
+    setSelected: Dispatch<SetStateAction<string>>;
+}
+
+export const About = ({ setSelected }: AboutProps) => {
     const [stackShow, setStackShow] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
 
+    const aboutRef = useRef<HTMLDivElement>(null);
+
     useEffect(() => {
         setIsVisible(true);
-        const intervalId = setInterval(() => {            
-            setStackShow((prev) => {
-                if(prev === 2) {
-                    return 0;
-                } else {
-                    return prev + 1
+
+        const handleScroll: IntersectionObserverCallback  = entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    setSelected("Sobre Mim")
                 }
             });
-        }, 2000);
+        }
+
+        const observer = new IntersectionObserver(handleScroll, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5
+        });
+
+        if(aboutRef.current) {
+            observer.observe(aboutRef.current);
+        }
 
         return () => {
-            clearInterval(intervalId);
+            if(aboutRef.current) {
+                observer.unobserve(aboutRef.current)
+            }
         }
+
     },[])
 
     return (
-        <main id="sobre" className={`w-full py-10 xl:h-screen xl:py-0 flex flex-col px-5 md:px-10 transition-opacity duration-[1s] ${isVisible ? 'opacity-100' : 'opacity-0'} bg-gray-900 justify-center gap-y-8 xl:gap-y-16 z-20`}>
+        <main id="sobre" ref={aboutRef} className={`w-full py-10 xl:h-screen xl:py-0 flex flex-col px-5 md:px-10 transition-opacity duration-[1s] ${isVisible ? 'opacity-100' : 'opacity-0'} bg-gray-900 justify-center gap-y-8 xl:gap-y-16 z-20`}>
             <div className="w-full flex flex-col md:gap-y-2">
                 <h1 className="font-normal text-3xl text-gray-200">Sobre Mim</h1> 
                 <div className="w-[100px] h-[2px] justify-self-center bg-terciary"></div>
