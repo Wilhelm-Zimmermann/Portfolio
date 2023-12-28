@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import { TechCard } from "./TechCard";
 import { BiLogoReact } from "react-icons/bi";
 import { BiLogoNodejs } from "react-icons/bi";
@@ -12,7 +12,11 @@ import { DiMysql } from "react-icons/di";
 import { TbBrandCSharp } from "react-icons/tb";
 import { FaWeebly } from "react-icons/fa";
 
-export const TechStack = () => {
+interface TechStackProps {
+    setSelected: Dispatch<SetStateAction<string>>;
+}
+
+export const TechStack = ({setSelected}: TechStackProps) => {
     const techStackRef = useRef<HTMLDivElement | null>(null);
     const [isVisible, setIsVisible] = useState<boolean>(false);
 
@@ -20,13 +24,14 @@ export const TechStack = () => {
         const options = {
             root: null,
             rootMargin: "0px",
-            threshold: 0.1
+            threshold: 0.5
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if(entry.isIntersecting) {
                     setIsVisible(true);
+                    setSelected("Oque eu faço")
                 }
             });
         }, options);

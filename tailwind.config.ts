@@ -8,6 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        openDrawer: "openDrawer 300ms ease-in"
+      },
+
+      keyframes: {
+        openDrawer: {
+          "0%": { transform: "translateY(0)"},
+          "100%": { transform: "translateY(30px)"},
+        }
+      },
       scrollbar: ['rounded'],
       colors: {
         background: "#2D2933",

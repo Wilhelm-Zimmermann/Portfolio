@@ -8,7 +8,11 @@ import Link from "next/link";
 import { FaPencil } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 
-export default function Sidebar() {
+interface SidebarProps {
+    selected: string;
+}
+
+export default function Sidebar({ selected }: SidebarProps) {
     const [showDrawer, setShowDrawer] = useState<boolean>(false);
 
     const toggleDrawer = () => {
@@ -32,18 +36,18 @@ export default function Sidebar() {
                     />
                 </div>
                 <span className="text-gray-100 mt-4 font-semibold text-lg text-center">Wilhelm H. Zimmermann</span>
-                <div className={`${showDrawer ? "flex absolute" : "hidden static"} top-20 left-0 z-20 w-full h-[200px] flex-col md:flex gap-y-4 mt-10 items-center justify-center text-lg bg-gray-900 md:bg-gray-950 md:static transition-all duration-[1s]`}>
+                <div className={`${showDrawer ? "opacity-100" : "opacity-0 invisible md:opacity-100 md:visible"} flex absolute top-16 left-0 z-20 w-full h-[200px] flex-col md:flex gap-y-4 mt-10 items-center justify-center text-lg bg-gray-900 md:bg-gray-950 md:static transition-opacity duration-300`}>
                     <a href="#home">
-                        <SidebarItem func={closeDrawer} title="Home" icon={<FaHome size={32}/>}/>
+                        <SidebarItem func={closeDrawer} selected={selected == "Home"} title="Home" icon={<FaHome size={32}/>}/>
                     </a>
                     <a href="#sobre">
-                        <SidebarItem func={closeDrawer} title="Sobre Mim" icon={<FaInfoCircle size={32}/>}/>
+                        <SidebarItem func={closeDrawer} selected={selected == "Sobre Mim"} title="Sobre Mim" icon={<FaInfoCircle size={32}/>}/>
                     </a>
                     <a href="#todo">
-                        <SidebarItem func={closeDrawer} title="Oque eu faço" icon={<FaPencil size={32}/>}/>
+                        <SidebarItem func={closeDrawer} selected={selected == "Oque eu faço"} title="Oque eu faço" icon={<FaPencil size={32}/>}/>
                     </a>
                     <a href="#resumo">
-                        <SidebarItem func={closeDrawer} title="Resumo" icon={<FaToolbox size={32}/>}/>
+                        <SidebarItem func={closeDrawer} selected={selected == "Resumo"} title="Resumo" icon={<FaToolbox size={32}/>}/>
                     </a>
                 </div>
             </div>
