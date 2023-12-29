@@ -8,6 +8,7 @@ import Resumo from '@/components/Resumo';
 import Principal from "@/components/Principal";
 import Footer from '@/components/Footer';
 import { useState } from 'react';
+import Contato from '@/components/Contato';
 
 export default function Home() {
   const [selected, setSelected] = useState<string>("Home");
@@ -21,7 +22,8 @@ export default function Home() {
           <About setSelected={setSelected}/>
           <TechStack setSelected={setSelected}/>
           <Resumo setSelected={setSelected}/>
-          <Footer />
+          <Contato setSelected={setSelected}/>
+          {/* <Footer /> */}
         </div>
       </div>
     </RootLayout>

@@ -49,6 +49,9 @@ export default function Sidebar({ selected }: SidebarProps) {
                     <a href="#resumo">
                         <SidebarItem func={closeDrawer} selected={selected == "Resumo"} title="Resumo" icon={<FaToolbox size={32}/>}/>
                     </a>
+                    <a href="#contato">
+                        <SidebarItem func={closeDrawer} selected={selected == "Contato"} title="Contato" icon={<FaToolbox size={32}/>}/>
+                    </a>
                 </div>
             </div>
 
