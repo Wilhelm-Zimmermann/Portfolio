@@ -11,7 +11,7 @@ export default function StackPercent({ title, percent}: StackPercentProps) {
                 <span className="text-gray-300">{ percent }%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full">
-                <div className="h-2 bg-gradient-to-r from-terciary to-purple-700 rounded-full" style={{width: percent + "%"}}></div>
+                <div className="h-2 bg-gradient-to-r from-blue-700 to-terciary rounded-full" style={{width: percent + "%"}}></div>
             </div>
         </div>
     )

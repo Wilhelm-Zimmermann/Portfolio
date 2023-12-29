@@ -50,13 +50,12 @@ export const About = ({ setSelected }: AboutProps) => {
             <div className="w-full flex flex-col justify-between xl:flex-row">
                 {/* info */}
                 <div className="w-[100%] md:mt-2 xl:w-[68%]">
-                    <h2 className="text-gray-50 font-semibold text-2xl">Olá, me chamo Wilhelm, sou um <span className="text-transparent font-bold bg-gradient-to-r from-blue-500 to-terciary bg-clip-text">Desenvolvedor Full Stack</span></h2>
+                    <h2 className="text-gray-50 font-semibold text-2xl">Olá, me chamo Wilhelm, sou <span className="text-transparent font-bold bg-gradient-to-r from-blue-500 to-terciary bg-clip-text">Desenvolvedor Full Stack</span></h2>
                     <h3 className="text-gray-300 text-lg mt-4">
-                        I am Full Stack Developer focused on the web, I am capable to build almost everything that envolves the web Ea adipisicing tempor voluptate et cillum do sunt ut. Commodo ullamco sit deserunt adipisicing Lorem ut do ipsum mollit quis. Ex et anim voluptate ad. Irure nostrud incididunt sint anim eiusmod labore reprehenderit sint fugiat tempor enim.
-                        nim ex proident in. Sunt duis quis deserunt sunt occaecat est ullamco voluptate aliqua eu culpa ut.
+                        Sou um desenvolvedor Full Stack focado no desenvolvimento web. Tenho a capacidade de construir sites utilizando as mais recentes tecnologias do mercado, sempre priorizando a performance e a responsividade.
                     </h3>
                     <h3 className="text-gray-300 text-lg mt-4">
-                    Full Stack Developer focused on the web, I am capable to build almost everything that envolves the web Ea adipisicing tempo
+                        Além disso, consigo criar APIs e realizar integrações com APIs já existentes no mercado.
                     </h3>
                 </div>
                 {/* end info */}

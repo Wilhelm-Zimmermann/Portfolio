@@ -48,7 +48,7 @@ export default function Resumo({setSelected}: ResumoProps) {
                 <div className="flex flex-col w-full mt-4 xl:mt-0 xl:w-[50%]">
                     <h2 className="text-white font-semibold text-2xl">Educação</h2>
 
-                    <div className="flex flex-col bg-gray-950 w-full min-h-[200px] justify-center gap-2 mt-6 rounded-md text-white p-6">
+                    <div className="flex flex-col bg-gray-950 w-full min-h-[200px] justify-center gap-2 mt-6 rounded-lg text-white p-6 border-2 border-terciary hover:shadow-md hover:shadow-purple-800 transition-all duration-200">
                         <h2 className="bg-gradient-to-r from-terciary to-purple-800 w-fit px-2 py-[2px] rounded-lg">2018 - 2020</h2>
                         <h3 className="mt-2 font-semibold text-xl">Ensino Médio</h3>
                         <h4 className="font-bold text-terciary">Frederico Hardt / Indaial-SC</h4>
@@ -60,19 +60,19 @@ export default function Resumo({setSelected}: ResumoProps) {
                 <div className="flex flex-col w-full mt-4 xl:mt-0 xl:w-[50%]">
                     <h2 className="text-white font-semibold text-2xl">Experiências</h2>
                     
-                    <div className="flex flex-col bg-gray-950 w-full min-h-[200px] justify-center gap-2 mt-6 rounded-md text-white p-6">
+                    <div className="flex flex-col bg-gray-950 w-full min-h-[200px] justify-center gap-2 mt-6 rounded-lg text-white p-6 border-2 border-terciary hover:shadow-md hover:shadow-purple-800 transition-all duration-200">
                         <h2 className="bg-gradient-to-r from-terciary to-purple-800 w-fit px-2 py-[2px] rounded-lg">01/2022 - 03/2022</h2>
                         <h3 className="mt-2 font-semibold text-xl">Programador de Sistemas JR.</h3>
                         <h4 className="font-bold text-terciary">Print Wayy / Lages-SC</h4>
                     </div>
 
-                    <div className="flex flex-col bg-gray-950 w-full min-h-[200px] justify-center gap-2 mt-6 rounded-md text-white p-6">
+                    <div className="flex flex-col bg-gray-950 w-full min-h-[200px] justify-center gap-2 mt-6 rounded-lg text-white p-6 border-2 border-terciary hover:shadow-md hover:shadow-purple-800 transition-all duration-200">
                         <h2 className="bg-gradient-to-r from-terciary to-purple-800 w-fit px-2 py-[2px] rounded-lg">03/2022 - 02/2023</h2>
                         <h3 className="mt-2 font-semibold text-xl">Soldado</h3>
                         <h4 className="font-bold text-terciary">Exército Brasileiro / Blumenau-SC</h4>
                     </div>
 
-                    <div className="flex flex-col bg-gray-950 w-full min-h-[200px] justify-center gap-2 mt-6 rounded-md text-white p-6">
+                    <div className="flex flex-col bg-gray-950 w-full min-h-[200px] justify-center gap-2 mt-6 rounded-lg text-white p-6 border-2 border-terciary hover:shadow-md hover:shadow-purple-800 transition-all duration-200">
                         <h2 className="bg-gradient-to-r from-terciary to-purple-800 w-fit px-2 py-[2px] rounded-lg">06/2023 - ..</h2>
                         <h3 className="mt-2 font-semibold text-xl">Programador de Sistemas</h3>
                         <h4 className="font-bold text-terciary">Grupo Giovanella / Indaial-SC</h4>
