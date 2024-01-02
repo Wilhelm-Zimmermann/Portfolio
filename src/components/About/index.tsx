@@ -52,7 +52,7 @@ export const About = ({ setSelected }: AboutProps) => {
                 <div className="w-[100%] md:mt-2 xl:w-[68%]">
                     <h2 className="text-gray-50 font-semibold text-2xl">Olá, me chamo Wilhelm, sou <span className="text-transparent font-bold bg-gradient-to-r from-blue-500 to-terciary bg-clip-text">Desenvolvedor Full Stack</span></h2>
                     <h3 className="text-gray-300 text-lg mt-4">
-                        Sou um desenvolvedor Full Stack focado no desenvolvimento web. Tenho a capacidade de construir sites utilizando as mais recentes tecnologias do mercado, sempre priorizando a performance e a responsividade.
+                        Sou um desenvolvedor Full Stack focado no desenvolvimento web. Tenho a capacidade de construir sites utilizando as mais recentes tecnologias do mercado, como <span className="font-bold">Next</span>, <span className="font-bold">Node JS</span>, <span className="font-bold">.NET</span>,e <span className="font-bold">MySQL</span>, sempre priorizando a performance e a responsividade.
                     </h3>
                     <h3 className="text-gray-300 text-lg mt-4">
                         Além disso, consigo criar APIs e realizar integrações com APIs já existentes no mercado.
