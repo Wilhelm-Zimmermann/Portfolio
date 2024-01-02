@@ -9,7 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <title>Portifolio</title>
+      <title>Wilhelm Portfólio</title>
       {/* <body className='bg-gradient-to-br from-background via-primary to-secondary'> */}
       <body className='bg-gray-900'>
         {children}
